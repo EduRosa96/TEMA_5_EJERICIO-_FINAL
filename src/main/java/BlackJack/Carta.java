@@ -2,13 +2,12 @@ package BlackJack;
 
 public class Carta {
     //PARÁMETROS
-    private Palo palo;
-
     enum Palo {
         TREBOL, DIAMANTES, CORAZONES, PICAS
     }
+    private Palo palo;
 
-    ;
+
     private int numCarta;
 
     //CONSTRUCTOR
@@ -58,6 +57,6 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "[ " + numCarta + " - " + palo + " ]";
+        return "[ " + mostrarNumero() + " - " + palo + " ]";
     }
 }
