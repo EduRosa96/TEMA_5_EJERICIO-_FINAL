@@ -1,38 +1,43 @@
 package BlackJack;
 
 import java.util.ArrayList;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Mano extends Mazo {
-    private ArrayList<Carta> mano = new ArrayList<Carta>();
+    private ArrayList<Carta> cartasMano;
 
-    public Mano(Mazo mazo, ArrayList<Carta> mano) {
+    public Mano() {
         super();
-        this.mano = mano;
+        cartasMano = new ArrayList<Carta>();
+
     }
 
+    @XmlElement
     public int valorMano() {
         int total = 0;
-        for (Carta carta : mano) {
+        for (Carta carta : cartasMano) {
             total += carta.getValor();
+
         }
         return total;
+
     }
 
-    public boolean finDeJuego () {
-        if (valorMano() >=21 ) {
-            return true;
-        } else {
-            return false;
-        }
+    // retorna la evaluación de la condición, es decir, si valor mano
+    // es mayor a 21 es true si no false
+    public boolean finDeJuego() {
+        return valorMano() > 21;
     }
 
     @Override
     public String toString() {
-        return + valorMano() + super.toString() ;
+        return valorMano() + "\n" + super.toString();
     }
 
-    public void pedirCarta (Mazo mazo){
-        mano.add (solicitarCarta());
+    public void pedirCarta(Mazo mazo) {
+        cartasMano.add(solicitarCarta());
     }
 }
 

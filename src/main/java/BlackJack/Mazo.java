@@ -5,39 +5,40 @@ import java.util.Collections;
 
 
 public class Mazo {
-        ArrayList<Carta> mazo = new ArrayList<Carta>(52);
+    private ArrayList<Carta> cartas = new ArrayList<Carta>();
 
-        public Mazo() {
-            for (Carta.Palo p : Carta.Palo.values()) {
-                for (int i = 1; i < 14; i++) {
-                    mazo.add(new Carta(p, i));
-                }
+    public Mazo() {
+        for (Carta.Palo p : Carta.Palo.values()) {
+            for (int i = 1; i < 14; i++) {
+                this.cartas.add(new Carta(p, i));
             }
         }
+    }
 
     public void barajar() {
-        Collections.shuffle(mazo);
+        Collections.shuffle(cartas);
     }
 
     @Override
     public String toString() {
-       /* for (int i = 0; i < mazo.toArray().length; i++) {
-            return "El mazo es: " +
-                    mazo.toArray()[i] + " ";
+       /* for (int i = 0; i < cartas.toArray().length; i++) {
+            return "El cartas es: " +
+                    cartas.toArray()[i] + " ";
 
-        } return mazo.toString();*/
+        } return cartas.toString();*/
         String cadena = "El mazo es: ";
-        for (Carta carta : mazo){
+        for (Carta carta : cartas) {
             cadena += carta + " ";
         }
         return cadena;
     }
 
     public Carta solicitarCarta() {
-            Carta carta = mazo.getFirst();
-            mazo.remove(carta);
-            return carta;
+        Carta carta = cartas.getFirst();
+        cartas.remove(carta);
+        return carta;
     }
+
 }
 
 
