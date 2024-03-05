@@ -2,7 +2,7 @@ package BlackJack;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+
 
 public class Mazo {
         ArrayList<Carta> mazo = new ArrayList<Carta>(52);
