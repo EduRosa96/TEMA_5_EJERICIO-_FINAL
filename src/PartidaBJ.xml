@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cartas>
+    <cartasMano>
+        <mostrarCarta>4</mostrarCarta>
+    </cartasMano>
+    <cartasMano>
+        <mostrarCarta>10</mostrarCarta>
+    </cartasMano>
+    <cartasMano>
+        <mostrarCarta>5</mostrarCarta>
+    </cartasMano>
+    <Valor de la mano>19</Valor de la mano>
+</cartas>

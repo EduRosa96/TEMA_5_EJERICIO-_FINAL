@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "cartas")
 public class Mano extends Mazo {
+    @XmlElement
     private ArrayList<Carta> cartasMano;
 
     public Mano() {
@@ -14,7 +15,11 @@ public class Mano extends Mazo {
 
     }
 
-    @XmlElement
+    @XmlElement(name = "ValorMano")
+    public int getValorMano() {
+        return valorMano();
+    }
+
     public int valorMano() {
         int total = 0;
         for (Carta carta : cartasMano) {
@@ -33,7 +38,7 @@ public class Mano extends Mazo {
 
     @Override
     public String toString() {
-        return valorMano() + "\n" + super.toString();
+        return valorMano() + "\n" + cartasMano;
     }
 
     public void pedirCarta(Mazo mazo) {

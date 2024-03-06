@@ -1,8 +1,10 @@
 package BlackJack;
 
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlElement;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ import java.util.Scanner;
 
 
 public class Juego {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JAXBException {
         Mazo mazo = new Mazo();
 
         Mano mano = new Mano();
@@ -31,7 +33,7 @@ public class Juego {
                     System.out.println("Te has pasado de 21!");
                     break;
                 }
-                else if (mano.valorMano() == 21){
+                if (mano.valorMano() == 21) {
                     System.out.println("GANASTE!!");
                     break;
                 }
@@ -45,14 +47,13 @@ public class Juego {
 
 
         }
-        try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Mano.class);
-            //   Marshallers marshaller = jaxbContext.createMarshaller();
-            //  marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            //  marshaller.marshal(mano, new File("PartidaBJ.xml"));
-        }catch (JAXBException e){
-            System.out.println(e);
-        }
+
+        System.out.println("Su mano es: " + mano);
+
+        JAXBContext jaxbContext = JAXBContext.newInstance(Mano.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(mano, new File("C:\\Users\\edy_e\\Desktop\\CODING\\PROGRAMACIÓN\\ejemplos clase\\ProyectoTema5\\src\\PartidaBJ.xml"));
     }
 
 }

@@ -1,10 +1,13 @@
 package BlackJack;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class Carta {
     //PARÁMETROS
     enum Palo {
         TREBOL, DIAMANTES, CORAZONES, PICAS
     }
+
     private Palo palo;
 
 
@@ -53,6 +56,12 @@ public class Carta {
         } else {
             return Integer.toString(numCarta);
         }
+    }
+
+    @XmlElement
+    public String getMostrarCarta() {
+
+        return mostrarNumero();
     }
 
     @Override
