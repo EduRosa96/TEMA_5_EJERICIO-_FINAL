@@ -9,13 +9,15 @@ public class Mano extends Mazo {
     //ARRAYLIST
     @XmlElement
     private ArrayList<Carta> cartasMano;
-//CONSTRUCTOR
+
+    //CONSTRUCTOR
     public Mano() {
         super();
         cartasMano = new ArrayList<Carta>();
 
     }
-//METODOS Y GETTERS
+
+    //METODOS Y GETTERS
     @XmlElement(name = "ValorMano")
     public int getValorMano() {
         return valorMano();
@@ -37,6 +39,7 @@ public class Mano extends Mazo {
         return valorMano() > 21;
     }
 
+    //METODO TOSTRING
     @Override
     public String toString() {
         return valorMano() + "\n" + cartasMano;

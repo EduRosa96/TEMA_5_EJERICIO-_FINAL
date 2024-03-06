@@ -34,8 +34,7 @@ public class Juego {
                 if (mano.finDeJuego()) {
                     System.out.println("Te has pasado de 21!");
                     break;
-                }
-                else if (mano.valorMano() == 21) {
+                } else if (mano.valorMano() == 21) {
                     System.out.println("GANASTE!!");
                     break;
                 }
