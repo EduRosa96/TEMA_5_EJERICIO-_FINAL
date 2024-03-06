@@ -33,7 +33,7 @@ public class Carta {
             return -1;
         }
     }
-
+         @XmlElement  (name = "valor")
     public int getValor() {
         if (numCarta == 1) {
             return numCarta = 11;
@@ -43,7 +43,7 @@ public class Carta {
             return numCarta;
         }
     }
-
+               // METODOS
     public String mostrarNumero() {
         if (numCarta == 1) {
             return "AS";
@@ -58,10 +58,10 @@ public class Carta {
         }
     }
 
-    @XmlElement
-    public String getMostrarCarta() {
 
-        return mostrarNumero();
+    @XmlElement(name = "carta")
+    public String getToString() {
+        return toString();
     }
 
     @Override

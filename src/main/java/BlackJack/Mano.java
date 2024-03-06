@@ -6,15 +6,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "cartas")
 public class Mano extends Mazo {
+    //ARRAYLIST
     @XmlElement
     private ArrayList<Carta> cartasMano;
-
+//CONSTRUCTOR
     public Mano() {
         super();
         cartasMano = new ArrayList<Carta>();
 
     }
-
+//METODOS Y GETTERS
     @XmlElement(name = "ValorMano")
     public int getValorMano() {
         return valorMano();

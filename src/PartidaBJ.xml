@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <cartas>
     <cartasMano>
-        <mostrarCarta>4</mostrarCarta>
+        <carta>[ 10 - TREBOL ]</carta>
+        <valor>10</valor>
     </cartasMano>
     <cartasMano>
-        <mostrarCarta>10</mostrarCarta>
+        <carta>[ 2 - TREBOL ]</carta>
+        <valor>2</valor>
     </cartasMano>
     <cartasMano>
-        <mostrarCarta>5</mostrarCarta>
+        <carta>[ 3 - TREBOL ]</carta>
+        <valor>3</valor>
     </cartasMano>
-    <ValorMano>19</ValorMano>
+    <cartasMano>
+        <carta>[ 4 - TREBOL ]</carta>
+        <valor>4</valor>
+    </cartasMano>
+    <cartasMano>
+        <carta>[ 5 - TREBOL ]</carta>
+        <valor>5</valor>
+    </cartasMano>
+    <ValorMano>24</ValorMano>
 </cartas>

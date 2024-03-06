@@ -5,8 +5,9 @@ import java.util.Collections;
 
 
 public class Mazo {
+    //ARRYLIST
     private ArrayList<Carta> cartas = new ArrayList<Carta>();
-
+//CONSTRUCTOR
     public Mazo() {
         for (Carta.Palo p : Carta.Palo.values()) {
             for (int i = 1; i < 14; i++) {
@@ -14,7 +15,7 @@ public class Mazo {
             }
         }
     }
-
+//METODOS
     public void barajar() {
         Collections.shuffle(cartas);
     }
