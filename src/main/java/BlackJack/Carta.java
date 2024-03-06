@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class Carta {
     //PARÁMETROS
-    enum Palo {
+     enum Palo {
         TREBOL, DIAMANTES, CORAZONES, PICAS
     }
 

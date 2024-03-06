@@ -3,11 +3,7 @@ package BlackJack;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlElement;
 import java.io.File;
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 

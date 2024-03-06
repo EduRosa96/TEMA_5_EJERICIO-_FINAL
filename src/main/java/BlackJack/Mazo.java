@@ -24,11 +24,6 @@ public class Mazo {
 
     @Override
     public String toString() {
-       /* for (int i = 0; i < cartas.toArray().length; i++) {
-            return "El cartas es: " +
-                    cartas.toArray()[i] + " ";
-
-        } return cartas.toString();*/
         String cadena = "El mazo es: ";
         for (Carta carta : cartas) {
             cadena += carta + " ";
