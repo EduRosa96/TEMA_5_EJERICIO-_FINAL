@@ -49,11 +49,14 @@ public class Juego {
         }
 
         System.out.println("Su mano es: " + mano);
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Mano.class);
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(mano, new File("C:\\Users\\edy_e\\Desktop\\CODING\\PROGRAMACIÓN\\ejemplos clase\\ProyectoTema5\\src\\PartidaBJ.xml"));
+        } catch (JAXBException e) {
+            e.printStackTrace(); // Imprime el error en la consola
+        }
 
-        JAXBContext jaxbContext = JAXBContext.newInstance(Mano.class);
-        Marshaller marshaller = jaxbContext.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(mano, new File("C:\\Users\\edy_e\\Desktop\\CODING\\PROGRAMACIÓN\\ejemplos clase\\ProyectoTema5\\src\\PartidaBJ.xml"));
     }
-
 }
