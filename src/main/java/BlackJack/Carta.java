@@ -36,10 +36,11 @@ public class Carta {
 
     @XmlElement(name = "valor")
     public int getValor() {
+        int numValorCarta;
         if (numCarta == 1) {
-            return numCarta = 11;
+            return numValorCarta = 11;
         } else if (numCarta == 11 || numCarta == 12 || numCarta == 13) {
-            return numCarta = 10;
+            return numValorCarta = 10;
         } else {
             return numCarta;
         }

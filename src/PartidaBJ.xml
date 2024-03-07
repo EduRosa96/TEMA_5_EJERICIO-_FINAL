@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <cartas>
     <cartasMano>
-        <carta>[ 10 - TREBOL ]</carta>
-        <valor>10</valor>
+        <carta>[ 5 - PICAS ]</carta>
+        <valor>5</valor>
     </cartasMano>
     <cartasMano>
-        <carta>[ 10 - PICAS ]</carta>
-        <valor>10</valor>
+        <carta>[ 6 - PICAS ]</carta>
+        <valor>6</valor>
     </cartasMano>
     <cartasMano>
-        <carta>[ 4 - CORAZONES ]</carta>
-        <valor>4</valor>
+        <carta>[ J - CORAZONES ]</carta>
+        <valor>10</valor>
     </cartasMano>
-    <ValorMano>24</ValorMano>
+    <ValorMano>21</ValorMano>
 </cartas>
