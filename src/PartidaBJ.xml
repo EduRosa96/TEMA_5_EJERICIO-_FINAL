@@ -5,20 +5,12 @@
         <valor>10</valor>
     </cartasMano>
     <cartasMano>
-        <carta>[ 2 - TREBOL ]</carta>
-        <valor>2</valor>
+        <carta>[ 10 - PICAS ]</carta>
+        <valor>10</valor>
     </cartasMano>
     <cartasMano>
-        <carta>[ 3 - TREBOL ]</carta>
-        <valor>3</valor>
-    </cartasMano>
-    <cartasMano>
-        <carta>[ 4 - TREBOL ]</carta>
+        <carta>[ 4 - CORAZONES ]</carta>
         <valor>4</valor>
-    </cartasMano>
-    <cartasMano>
-        <carta>[ 5 - TREBOL ]</carta>
-        <valor>5</valor>
     </cartasMano>
     <ValorMano>24</ValorMano>
 </cartas>

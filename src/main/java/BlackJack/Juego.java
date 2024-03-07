@@ -13,7 +13,7 @@ public class Juego {
         Mazo mazo = new Mazo();
 
         Mano mano = new Mano();
-        mazo.barajar();
+        mano.barajar();
 
         System.out.println("Bienvenido a la mesa de black Jack");
 
